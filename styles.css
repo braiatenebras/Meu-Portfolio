@@ -155,7 +155,6 @@ p {
     /* animaçãozinha */
 }
 @media (max-width: 768px) {
-    /* Ajuste do header */
     header {
         padding: 15px 20px 30px;
     }
@@ -168,7 +167,6 @@ p {
         text-align: center;
     }
     
-    /* Navbar ajustável */
     nav ul {
         gap: 1rem;
         flex-wrap: wrap;
@@ -180,7 +178,6 @@ p {
         font-size: 0.9rem;
     }
     
-    /* Conteúdo principal */
     .topo_do_site {
         flex-direction: column;
         gap: 30px;
@@ -198,14 +195,13 @@ p {
         white-space: normal;
     }
     
-    /* Imagem */
     .minhafoto img {
         width: 70%;
         margin: 0 auto;
     }
     
     .minhafoto {
-        order: -1; /* Coloca a imagem antes do texto */
+        order: -1; /* imagem antes do texto */
         margin-bottom: 20px;
     }
     
