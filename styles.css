@@ -64,6 +64,12 @@ nav a:hover {
 
 .inicio h1 {
     font-size: 40px;
+    white-space: nowrap; /* faz o texto ir ate o final */
+    
+}
+
+.inicio p {
+    margin-top: 5px; /* faz o texto de baixo ficar um pouco mais distante */
 }
 
 
@@ -73,13 +79,14 @@ nav a:hover {
 .footer {
     padding: 30px 0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 250px;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Distancia dos icones */
+    gap: 40px;
+    /* Distancia dos icones */
 }
 
 .social-link {
@@ -89,5 +96,6 @@ nav a:hover {
 }
 
 .social-link:hover {
-    transform: scale(1.2); /* animaçãozinha */
+    transform: scale(1.2);
+    /* animaçãozinha */
 }
