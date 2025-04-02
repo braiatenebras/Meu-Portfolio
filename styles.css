@@ -72,7 +72,7 @@ nav a:hover {
     border-radius: 70%;
     border: 3px solid transparent;
     box-shadow: 
-        0 0 10px rgba(106, 1, 116, 0.8),
+        0 0 10px rgba(177, 1, 24, 0.8),
         inset 0 0 10px rgba(106, 1, 116, 0.5);
     transition: all 0.5s ease;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
@@ -82,10 +82,10 @@ nav a:hover {
 
 .minhafoto img:hover {
     box-shadow: 
-        0 0 20px rgba(106, 1, 116, 1),
+        0 0 20px rgb(141, 3, 15),
         inset 0 0 20px rgba(106, 1, 116, 0.8);
     transform: perspective(500px) rotateY(0) scale(1.05);
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 12px rgba(153, 4, 141, 0.3));
 }
 
 .minhafoto {
@@ -153,4 +153,79 @@ p {
 .social-link:hover {
     transform: scale(1.2);
     /* animaçãozinha */
+}
+@media (max-width: 768px) {
+    /* Ajuste do header */
+    header {
+        padding: 15px 20px 30px;
+    }
+    
+    header h1 {
+        margin-top: 10px;
+        font-size: 1.8rem;
+        position: static;
+        display: block;
+        text-align: center;
+    }
+    
+    /* Navbar ajustável */
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    nav a {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Conteúdo principal */
+    .topo_do_site {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .inicio h1,
+    .inicio p {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .inicio h1 {
+        font-size: 2rem;
+        white-space: normal;
+    }
+    
+    /* Imagem */
+    .minhafoto img {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .minhafoto {
+        order: -1; /* Coloca a imagem antes do texto */
+        margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes finos para celulares pequenos */
+    nav a {
+        padding: 10px 15px;
+    }
+    
+    .inicio h1 {
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 25px;
+    }
 }
