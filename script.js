@@ -1,17 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const titulo = document.querySelector('.inicio h1');
-    const textoOriginal = titulo.textContent; // pega o texto do html
+    const textoOriginal = titulo.textContent;
     
-    titulo.textContent = ''; // limpa o titulo
+    titulo.innerHTML = '<span class="cursor">|</span>'; // Cursor inicial
     let i = 0;
     
     function digitar() {
         if (i < textoOriginal.length) {
-            titulo.textContent = textoOriginal.substring(0, i + 1); // Substitui o texto
+            titulo.innerHTML = 
+                textoOriginal.substring(0, i + 1) + 
+                '<span class="cursor">|</span>';
             i++;
-            setTimeout(digitar, 80); // Velocidade da digitação (100ms)
+            setTimeout(digitar, 80);
+        } else {
+            // Cursor final roxo
+            titulo.innerHTML = textoOriginal + '<span class="cursor purple">|</span>';
         }
     }
     
-    digitar(); 
+    digitar();
 });

@@ -223,3 +223,13 @@ p {
         gap: 25px;
     }
 }
+.cursor {
+    animation: piscar 0.7s infinite;
+    color: rgb(106, 1, 116);
+    font-weight: bold;
+}
+
+@keyframes piscar { /* faz o cursos piscar */
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
