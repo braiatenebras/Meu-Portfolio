@@ -15,19 +15,18 @@ body {
 }
 
 header {
-    padding: 50px;
+    padding: 20px 50px 50px; 
 }
 
 header h1 {
-    margin-top: -35px;
+    margin-top: -46px;
     font-style: italic;
     transition: all 0.3s ease;
-    /* animação */
     padding: 10px 20px;
     border-radius: 80px;
     display: inline-block;
+    position: absolute;
 }
-
 header h1:hover {
     background-color: rgb(106, 1, 116);
     transform: scale(1.05);
@@ -71,8 +70,43 @@ nav a:hover {
     width: 90%;
     height: 100%;
     border-radius: 70%;
+    border: 3px solid transparent;
+    box-shadow: 
+        0 0 10px rgba(106, 1, 116, 0.8),
+        inset 0 0 10px rgba(106, 1, 116, 0.5);
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    transform: perspective(500px) rotateY(15deg);
+    display: block; 
+}
 
+.minhafoto img:hover {
+    box-shadow: 
+        0 0 20px rgba(106, 1, 116, 1),
+        inset 0 0 20px rgba(106, 1, 116, 0.8);
+    transform: perspective(500px) rotateY(0) scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
+}
 
+.minhafoto {
+    padding: 8px;
+    background: linear-gradient(45deg, 
+        rgb(106, 1, 116), 
+        rgb(59, 0, 114),
+        rgb(0, 0, 0));
+    border-radius: 75%;
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.98); opacity: 0.6; }
+    100% { transform: scale(1.05); opacity: 0.2; }
+}
+
+.minhafoto::before {
+    /* Mantenha o conteúdo anterior */
+    animation: pulse 4s infinite ease-in-out alternate; /* Mais suave */
 }
 
 .inicio h1 {
@@ -119,14 +153,4 @@ p {
 .social-link:hover {
     transform: scale(1.2);
     /* animaçãozinha */
-}
-@media (max-width: 768px) {
-    .topo_do_site {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .minhafoto img {
-        width: 200px;
-        height: 200px;
-    }
 }
