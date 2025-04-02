@@ -134,7 +134,10 @@ p {
 .footer {
     padding: 30px 0;
     text-align: center;
-    margin-top: 250px;
+}
+.footer h1 {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .social-links {
@@ -203,11 +206,6 @@ p {
     .minhafoto {
         order: -1; /* imagem antes do texto */
         margin-bottom: 20px;
-    }
-    
-    /* Footer */
-    .footer {
-        margin-top: 100px;
     }
 }
 
