@@ -21,6 +21,19 @@ header {
 header h1 {
     margin-top: -35px;
     font-style: italic;
+    transition: all 0.3s ease;
+    /* animação */
+    padding: 10px 20px;
+    border-radius: 80px;
+    display: inline-block;
+}
+
+header h1:hover {
+    background-color: rgb(106, 1, 116);
+    transform: scale(1.05);
+    /* efeito de zoom */
+    cursor: default;
+    /* para não mudar o cursor em cima, continuar padrão */
 }
 
 nav {
@@ -49,29 +62,37 @@ nav a:hover {
 .topo_do_site {
     display: flex;
     align-items: center;
-    gap: 650px;
+    gap: 350px;     /* distancia da imagem e o texto */
     padding: 50px;
 }
 
 
 .minhafoto img {
-    width: 40%;
+    width: 90%;
     height: 100%;
     border-radius: 70%;
-    margin-right: -300px;
+
 
 }
 
 .inicio h1 {
     font-size: 40px;
-    white-space: nowrap; /* faz o texto ir ate o final */
-    
+    white-space: nowrap;
+    /* faz o texto ir ate o final */
+    font-style: italic;
+
 }
 
 .inicio p {
-    margin-top: 5px; /* faz o texto de baixo ficar um pouco mais distante */
+    margin-top: 5px;
+    /* faz o texto de baixo ficar um pouco mais distante */
+    font-size: 17px;
 }
 
+.inicio h1,
+p {
+    margin-left: 30px;
+}
 
 
 
@@ -98,4 +119,14 @@ nav a:hover {
 .social-link:hover {
     transform: scale(1.2);
     /* animaçãozinha */
+}
+@media (max-width: 768px) {
+    .topo_do_site {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .minhafoto img {
+        width: 200px;
+        height: 200px;
+    }
 }
