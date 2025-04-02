@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    padding: 20px 50px 50px; 
+    padding: 20px 50px 50px;
 }
 
 header h1 {
@@ -27,6 +27,7 @@ header h1 {
     display: inline-block;
     position: absolute;
 }
+
 header h1:hover {
     background-color: rgb(106, 1, 116);
     transform: scale(1.05);
@@ -61,7 +62,8 @@ nav a:hover {
 .topo_do_site {
     display: flex;
     align-items: center;
-    gap: 350px;     /* distancia da imagem e o texto */
+    gap: 350px;
+    /* distancia da imagem e o texto */
     padding: 50px;
 }
 
@@ -71,17 +73,17 @@ nav a:hover {
     height: 100%;
     border-radius: 70%;
     border: 3px solid transparent;
-    box-shadow: 
+    box-shadow:
         0 0 10px rgba(177, 1, 24, 0.8),
         inset 0 0 10px rgba(106, 1, 116, 0.5);
     transition: all 0.5s ease;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
     transform: perspective(500px) rotateY(15deg);
-    display: block; 
+    display: block;
 }
 
 .minhafoto img:hover {
-    box-shadow: 
+    box-shadow:
         0 0 20px rgb(141, 3, 15),
         inset 0 0 20px rgba(106, 1, 116, 0.8);
     transform: perspective(500px) rotateY(0) scale(1.05);
@@ -90,23 +92,31 @@ nav a:hover {
 
 .minhafoto {
     padding: 8px;
-    background: linear-gradient(45deg, 
-        rgb(106, 1, 116), 
-        rgb(59, 0, 114),
-        rgb(0, 0, 0));
+    background: linear-gradient(45deg,
+            rgb(106, 1, 116),
+            rgb(59, 0, 114),
+            rgb(0, 0, 0));
     border-radius: 75%;
     display: inline-block;
     position: relative;
 }
 
 @keyframes pulse {
-    0% { transform: scale(0.98); opacity: 0.6; }
-    100% { transform: scale(1.05); opacity: 0.2; }
+    0% {
+        transform: scale(0.98);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.05);
+        opacity: 0.2;
+    }
 }
 
 .minhafoto::before {
     /* Mantenha o conteúdo anterior */
-    animation: pulse 4s infinite ease-in-out alternate; /* Mais suave */
+    animation: pulse 4s infinite ease-in-out alternate;
+    /* Mais suave */
 }
 
 .inicio h1 {
@@ -135,6 +145,7 @@ p {
     padding: 30px 0;
     text-align: center;
 }
+
 .footer h1 {
     margin-bottom: 30px;
     text-align: center;
@@ -157,15 +168,25 @@ p {
     transform: scale(1.2);
     /* animaçãozinha */
 }
+
 .projetos {
     text-align: center;
     font-size: 25px;
 }
+
 .projetos span {
     color: rgb(143, 14, 155);
-   
+
 }
 
+header p {
+    text-align: center;
+}
+
+.copyright p {
+    margin-top: 25px;
+    text-align: center;
+}
 
 
 
@@ -180,7 +201,7 @@ p {
     header {
         padding: 15px 20px 30px;
     }
-    
+
     header h1 {
         margin-top: 10px;
         font-size: 1.8rem;
@@ -188,67 +209,82 @@ p {
         display: block;
         text-align: center;
     }
-    
+
     nav ul {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+
     nav a {
         padding: 15px;
         font-size: 0.9rem;
     }
-    
+
     .topo_do_site {
         flex-direction: column;
         gap: 30px;
         padding: 30px 20px;
     }
-    
+
     .inicio h1,
     .inicio p {
         margin-left: 0;
         text-align: center;
     }
-    
+
     .inicio h1 {
         font-size: 2rem;
         white-space: normal;
     }
-    
+
     .minhafoto img {
         width: 70%;
         margin: 0 auto;
     }
-    
+
     .minhafoto {
-        order: -1; /* imagem antes do texto */
+        order: -1;
+        /* imagem antes do texto */
         margin-bottom: 20px;
     }
 }
+.copyright p {
+    position: absolute;
+    margin-left: 110px;
+}
 
 @media (max-width: 480px) {
+
     /* Ajustes finos para celulares pequenos */
     nav a {
         padding: 10px 15px;
     }
-    
+
     .inicio h1 {
         font-size: 1.5rem;
     }
-    
+
     .social-links {
         gap: 25px;
     }
 }
+
 .cursor {
     animation: piscar 0.7s infinite;
     color: rgb(106, 1, 116);
     font-weight: bold;
 }
 
-@keyframes piscar { /* faz o cursos piscar */
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+@keyframes piscar {
+
+    /* faz o cursos piscar */
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
