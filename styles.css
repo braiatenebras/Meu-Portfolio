@@ -184,8 +184,27 @@ header p {
 }
 
 .copyright p {
+    position: absolute;
     margin-top: 25px;
-    text-align: center;
+    margin-left: 45%;}
+
+.cursor {
+    animation: piscar 0.7s infinite;
+    color: rgb(106, 1, 116);
+    font-weight: bold;
+}
+
+@keyframes piscar {
+
+    /* faz o cursor piscar */
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 
@@ -194,9 +213,7 @@ header p {
 
 
 
-
-
-
+/* AQUI COMEÇA A RESPONSAVIDADE */
 @media (max-width: 768px) {
     header {
         padding: 15px 20px 30px;
@@ -248,11 +265,14 @@ header p {
         /* imagem antes do texto */
         margin-bottom: 20px;
     }
+
+    .copyright p {
+        position: absolute;
+        margin-left: 115px;
+    }
 }
-.copyright p {
-    position: absolute;
-    margin-left: 110px;
-}
+
+
 
 @media (max-width: 480px) {
 
@@ -267,24 +287,5 @@ header p {
 
     .social-links {
         gap: 25px;
-    }
-}
-
-.cursor {
-    animation: piscar 0.7s infinite;
-    color: rgb(106, 1, 116);
-    font-weight: bold;
-}
-
-@keyframes piscar {
-
-    /* faz o cursos piscar */
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
     }
 }

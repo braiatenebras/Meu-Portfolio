@@ -20,4 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     digitar();
 });
-document.getElementById('current-year').textContent = new Date().getFullYear(); // para atualizar o ano automatico
+document.getElementById('current-year').textContent = new Date().getFullYear(); // para atualizar o ano automaticamente
