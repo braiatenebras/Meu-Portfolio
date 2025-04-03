@@ -21,3 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
     digitar();
 });
 document.getElementById('current-year').textContent = new Date().getFullYear(); // para atualizar o ano automaticamente
+const backToTopButton = document.getElementById('topo');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+    } else {
+        backToTopButton.classList.remove('visible');
+    }
+});
+
+// Rolagem suave ao clicar
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
