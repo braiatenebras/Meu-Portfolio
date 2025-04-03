@@ -38,9 +38,9 @@ const downloadLink = document.getElementById('downloadLink');
 if (downloadLink) {
     downloadLink.addEventListener('click', function () {
         setTimeout(() => {
-            const toast = document.getElementById('downloadToast');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3000);
+            const aviso = document.getElementById('downloadaviso');
+            aviso.classList.add('show');
+            setTimeout(() => aviso.classList.remove('show'), 3000);
         }, 500);
     });
 }
