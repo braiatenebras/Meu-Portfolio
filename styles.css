@@ -234,7 +234,7 @@ header p {
 }
 
 .topo:hover {
-    background-color: #7b1fa2;
+    background-color: #9c27b0;
     transform: scale(1.1);
 }
 
@@ -242,6 +242,12 @@ header p {
     opacity: 1;
     visibility: visible;
 }
+.topo i {
+    color: white;
+    background-color: #9c27b0;     /* para esconder o fundo preto e ficar mais bonito */
+
+}
+
 
 
 
