@@ -35,6 +35,47 @@ header h1:hover {
     cursor: default;
 }
 
+header button {
+    justify-content: right;
+    padding: 10px 40px;
+    margin-left: 80%;
+    margin-top: -60px;
+    position: absolute;
+    background-color: #9c27b0;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 0;
+    transition: transform 0.3s ease;
+}
+
+header button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(5, 0, 3, 0.8);
+}
+
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #9c27b0;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
 nav {
     padding: 10px;
 }
@@ -60,22 +101,6 @@ nav a:hover {
     transform: scale(1.15);
 }
 
-header button {
-    justify-content: right;
-    padding: 10px 40px;
-    margin-left: 80%;
-    margin-top: -61px;
-    position: absolute;
-    background-color: #9c27b0;
-    font-size: 15px;
-    border-radius: 30px;
-    border: 0;
-    transition: transform 0.3s ease;
-}
-
-header button:hover { 
-    transform: scale(1.15);
-}
 
 .topo_do_site {
     display: flex;
@@ -122,6 +147,7 @@ header button:hover {
         transform: scale(0.98);
         opacity: 0.6;
     }
+
     100% {
         transform: scale(1.05);
         opacity: 0.2;
@@ -206,9 +232,12 @@ header p {
 }
 
 @keyframes piscar {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -252,14 +281,14 @@ header p {
     .topo_do_site {
         gap: 200px;
     }
-    
+
 }
 
 @media (max-width: 992px) {
     .topo_do_site {
         gap: 150px;
     }
-    
+
     header button {
         margin-left: 75%;
     }
@@ -321,7 +350,8 @@ header p {
     }
 
     .minhafoto {
-        order: -1; /* faz a imagem vir primeiro */
+        order: -1;
+        /* faz a imagem vir primeiro */
         margin-bottom: 20px;
     }
 
@@ -341,15 +371,15 @@ header p {
     .topo_do_site {
         padding: 20px 15px;
     }
-    
+
     .inicio h1 {
         font-size: 1.8rem;
     }
-    
+
     .minhafoto img {
         width: 80%;
     }
-    
+
     header button {
         width: 80%;
     }
@@ -369,7 +399,7 @@ header p {
         flex-wrap: wrap;
         padding: 0 20px;
     }
-    
+
     header button {
         font-size: 17px;
     }
