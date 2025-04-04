@@ -222,7 +222,7 @@ header p {
 .copyright p {
     position: absolute;
     margin-top: 25px;
-    margin-left: 45%;
+    margin-left: 663px
 }
 
 .cursor {
@@ -362,7 +362,6 @@ header p {
     .copyright p {
         position: static;
         margin: 20px auto 0;
-        text-align: center;
         width: 100%;
     }
 }
