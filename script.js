@@ -19,7 +19,9 @@ function typeWriter() {
     digitar();
 }
 
-document.getElementById('current-year').textContent = new Date().getFullYear(); // ano
+// ano atual
+document.getElementById('current-year').textContent = new Date().getFullYear(); 
+
 
 // seta para voltar para o topo
 const backToTopButton = document.getElementById('topo');
@@ -47,5 +49,5 @@ if (downloadLink) {
         }, 500);
     });
 }
-
 document.addEventListener('DOMContentLoaded', typeWriter);
+
