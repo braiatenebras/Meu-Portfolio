@@ -202,8 +202,7 @@ nav a:hover {
 }
 
 .social-link:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 12px rgba(156, 39, 176, 0.8));
+    transform: scale(1.3);
 }
 
 .projetos {
