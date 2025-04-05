@@ -27,16 +27,21 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 const backToTopButton = document.getElementById('topo');
 if (backToTopButton) {
     window.addEventListener('scroll', () => {
-        backToTopButton.classList.toggle('visible', window.pageYOffset > 300); // o quanto de pixel a tela precisa descer para aparecer o botão
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
     });
 
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' 
+            behavior: 'smooth'
         });
     });
 }
+
 
 // avisar quando baixarem o curriculo
 const downloadLink = document.getElementById('downloadLink');
