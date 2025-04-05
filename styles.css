@@ -113,54 +113,50 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.minhafoto img {
-    width: 90%;
-    height: 100%;
-    border-radius: 70%;
-    border: 3px solid transparent;
-    box-shadow:
-        0 0 10px rgba(98, 2, 82, 0.8),
-        inset 0 0 10px rgba(106, 1, 116, 0.5);
-    transition: all 0.5s ease;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
-    display: block;
-}
-
-.minhafoto img:hover {
-    box-shadow:
-        0 0 20px rgb(170, 5, 159),
-        inset 0 0 20px rgba(106, 1, 116, 0.8);
-    transform: perspective(500px) rotateY(0) scale(1.05);
-    filter: drop-shadow(0 0 12px rgba(153, 4, 141, 0.3));
-}
-
 .minhafoto {
     padding: 8px;
-    background: linear-gradient(45deg,
-            rgb(106, 1, 116),
-            rgb(59, 0, 114),
-            rgb(0, 0, 0));
-    border-radius: 75%;
     display: inline-block;
     position: relative;
 }
 
+.minhafoto img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(170, 5, 159, 0.3);
+    box-shadow:
+        0 0 15px rgba(98, 2, 82, 0.6),
+        inset 0 0 15px rgba(106, 1, 116, 0.4);
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 8px rgba(153, 4, 141, 0.4));
+    display: block;
+    animation: pulse 2s infinite;
+}
+
+.minhafoto img:hover {
+    animation: none;
+    box-shadow:
+        0 0 25px rgba(170, 5, 159, 0.9),
+        inset 0 0 25px rgba(106, 1, 116, 0.6);
+    filter: drop-shadow(0 0 15px rgba(153, 4, 141, 0.6));
+    border-color: rgba(170, 5, 159, 0.6);
+}
+
 @keyframes pulse {
-    0% {
-        transform: scale(0.98);
-        opacity: 0.6;
+    0%, 100% {
+        box-shadow:
+            0 0 15px rgba(98, 2, 82, 0.6),
+            inset 0 0 15px rgba(106, 1, 116, 0.4);
+        filter: drop-shadow(0 0 8px rgba(153, 4, 141, 0.4));
     }
-
-    100% {
-        transform: scale(1.05);
-        opacity: 0.2;
+    50% {
+        box-shadow:
+            0 0 25px rgba(170, 5, 159, 0.9),
+            inset 0 0 25px rgba(106, 1, 116, 0.6);
+        filter: drop-shadow(0 0 15px rgba(153, 4, 141, 0.6));
     }
 }
-
-.minhafoto::before {
-    animation: pulse 4s infinite ease-in-out alternate;
-}
-
 .inicio h1 {
     font-size: 40px;
     white-space: nowrap;
@@ -348,6 +344,7 @@ nav a:hover {
     }
 }
 
+
 @media (max-width: 992px) {
     .topo_do_site {
         gap: 150px;
@@ -433,8 +430,8 @@ nav a:hover {
     }
 
     .minhafoto img {
-        width: 70%;
-        margin: 0 auto;
+        width: 200px;
+        height: 200px;
     }
 
     .minhafoto {
@@ -554,5 +551,9 @@ nav a:hover {
 
     .projetos {
         margin-top: 40px;
+    }
+    .minhafoto img {
+        width: 350px;
+        height: 350px;
     }
 }
