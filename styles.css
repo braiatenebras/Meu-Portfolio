@@ -144,12 +144,15 @@ nav a:hover {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow:
             0 0 15px rgba(98, 2, 82, 0.6),
             inset 0 0 15px rgba(106, 1, 116, 0.4);
         filter: drop-shadow(0 0 8px rgba(153, 4, 141, 0.4));
     }
+
     50% {
         box-shadow:
             0 0 25px rgba(170, 5, 159, 0.9),
@@ -157,6 +160,7 @@ nav a:hover {
         filter: drop-shadow(0 0 15px rgba(153, 4, 141, 0.6));
     }
 }
+
 .inicio h1 {
     font-size: 40px;
     white-space: nowrap;
@@ -177,7 +181,14 @@ nav a:hover {
 .projetos {
     text-align: center;
     font-size: 25px;
-    margin-top: 150px;
+    margin-top: 195px;
+
+}
+
+.projetos p {
+    text-align: center;
+    margin-top: 40px;
+
 }
 
 .projetos span {
@@ -531,7 +542,7 @@ nav a:hover {
     }
 
     header button {
-        font-size: 17px;   
+        font-size: 17px;
         margin-top: 30px;
     }
 
@@ -552,6 +563,7 @@ nav a:hover {
     .projetos {
         margin-top: 40px;
     }
+
     .minhafoto img {
         width: 350px;
         height: 350px;
