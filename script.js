@@ -42,7 +42,6 @@ if (backToTopButton) {
     });
 }
 
-
 // avisar quando baixarem o curriculo
 const downloadLink = document.getElementById('downloadLink');
 if (downloadLink) {
