@@ -218,7 +218,7 @@ nav a:hover {
 
 .projeto1 span {
     color: rgb(255, 230, 0);
-}   
+}
 
 /* Projeto do Slipknot */
 .projeto2 img {
@@ -229,6 +229,7 @@ nav a:hover {
     margin-left: 100px;
     transition: all 0.2s ease;
 }
+
 .projeto2 p {
     margin-top: -67px;
     font-size: 30px;
@@ -240,7 +241,7 @@ nav a:hover {
 .footer {
     padding: 30px 0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .footer h1 {
@@ -325,6 +326,11 @@ nav a:hover {
     background-color: #9c27b0;
 }
 
+.h4 {
+    font-size: 22px;
+    margin-top: 50px;
+    text-align: center;
+}
 
 
 /* RESPONSIVIDADE */
@@ -336,6 +342,7 @@ nav a:hover {
         margin-left: -500px;
         height: 300px;
     }
+
     .projeto2 img {
         margin-left: 50px;
         height: 300px;
@@ -361,14 +368,14 @@ nav a:hover {
     .projeto1 p {
         font-size: 25px;
     }
-    
+
     .projeto2 img {
         position: static;
         margin: 20px 0;
         height: 300px;
         width: auto;
     }
-    
+
     .projeto2 p {
         margin: 20px 0;
         text-align: center;
@@ -447,26 +454,31 @@ nav a:hover {
         padding: 0 20px;
     }
 
-    .projeto1, .projeto2 {
+    .projeto1,
+    .projeto2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 40px;
     }
 
-    .projeto1 img, .projeto2 img {
+    .projeto1 img,
+    .projeto2 img {
         margin: 0;
         width: 90%;
         height: auto;
         max-width: 500px;
-        order: 2; /* imagem depois do texto */
+        order: 2;
+        /* imagem depois do texto */
     }
 
-    .projeto1 p, .projeto2 p {
+    .projeto1 p,
+    .projeto2 p {
         margin: 20px 0 10px;
         text-align: center;
         font-size: 20px;
-        order: 1; /* texto antes da imagem */
+        order: 1;
+        /* texto antes da imagem */
     }
 }
 
@@ -487,11 +499,13 @@ nav a:hover {
         width: 80%;
     }
 
-    .projeto1 img, .projeto2 img {
+    .projeto1 img,
+    .projeto2 img {
         width: 100%;
     }
 
-    .projeto1 p, .projeto2 p {
+    .projeto1 p,
+    .projeto2 p {
         font-size: 18px;
     }
 
@@ -512,6 +526,7 @@ nav a:hover {
     .inicio h1 {
         font-size: 1.5rem;
     }
+
     .footer {
         margin-top: -20px;
     }
@@ -521,22 +536,26 @@ nav a:hover {
         flex-wrap: wrap;
         padding: 0 20px;
     }
-    
+
     header button {
-        font-size: 17px;
+        font-size: 17px;   
+        margin-top: 30px;
     }
 
-    .projeto1 p, .projeto2 p {
+    .projeto1 p,
+    .projeto2 p {
         font-size: 16px;
     }
 
     .projetos h1 {
         font-size: 20px;
     }
+
     .projetos p {
-       margin-bottom: 20px;
-       margin-top: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+
     .projetos {
         margin-top: 40px;
     }
