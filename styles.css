@@ -210,7 +210,7 @@ nav a:hover {
     height: 350px;
     border-radius: 20px;
     margin-top: 80px;
-    margin-left: -1000px;
+    margin-left: -790px;
     transition: all 0.2s ease;
 
 }
@@ -232,7 +232,7 @@ nav a:hover {
     height: 350px;
     border-radius: 20px;
     margin-top: -390px;
-    margin-left: 100px;
+    margin-left: 15px;
     transition: all 0.2s ease;
 }
 
