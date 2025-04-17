@@ -1,4 +1,4 @@
-// efeito de digitar no texto
+// Efeito de digitar no texto
 function typeWriter() {
     const titulo = document.querySelector('.inicio h1');
     if (!titulo) return;
@@ -13,17 +13,30 @@ function typeWriter() {
             i++;
             setTimeout(digitar, 80);
         } else {
-            titulo.innerHTML = textoOriginal + '<span class="cursor purple">|</span>';
+            titulo.innerHTML = textoOriginal + '<span class="cursor">|</span>';
         }
     }
     digitar();
 }
 
-// ano atual
+// Função para alternar entre verde e roxo com transição suave
+function changeColors() {
+    const colors = ['#008000', '#800080']; // Verde e Roxo
+    let currentIndex = 0;
+    
+    // Adiciona transição no CSS root
+    document.documentElement.style.transition = '--dynamic-color 1s ease';
+    
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % colors.length;
+        document.documentElement.style.setProperty('--dynamic-color', colors[currentIndex]);
+    }, 2000); // Intervalo de 2 segundos
+}
+
+// Ano atual
 document.getElementById('current-year').textContent = new Date().getFullYear(); 
 
-
-// seta para voltar para o topo
+// Seta para voltar para o topo
 const backToTopButton = document.getElementById('topo');
 if (backToTopButton) {
     window.addEventListener('scroll', () => {
@@ -42,7 +55,7 @@ if (backToTopButton) {
     });
 }
 
-// avisar quando baixarem o curriculo
+// Avisar quando baixarem o curriculo
 const downloadLink = document.getElementById('downloadLink');
 if (downloadLink) {
     downloadLink.addEventListener('click', function () {
@@ -53,5 +66,15 @@ if (downloadLink) {
         }, 500);
     });
 }
-document.addEventListener('DOMContentLoaded', typeWriter);
 
+// Inicialização
+document.addEventListener('DOMContentLoaded', function() {
+    // Define a cor inicial com transição
+    document.documentElement.style.setProperty('--dynamic-color', '#008000');
+    
+    // Inicia a animação de cores
+    changeColors();
+    
+    // Inicia o efeito de digitação
+    typeWriter();
+});
