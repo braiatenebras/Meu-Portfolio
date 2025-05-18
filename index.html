@@ -2,112 +2,59 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Meu Portfolio </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
     <header id="inicio">
-        <div> 
+        <div>
             <nav>
-                <h1> Meu Portfolio </h1>
+                <h1>Meu Portfolio</h1>
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#footer">Contatos</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="pages/Sobre Mim/sobremim.html"><i class="fas fa-user"></i> Sobre mim</a></li>
+                    <li><a href="pages/Projetos/projeto.html"><i class="fas fa-briefcase"></i> Projetos</a></li>
+                    <li><a href="pages/Contato/contatos.html"><i class="fas fa-envelope"></i> Contatos</a></li>
                 </ul>
-
             </nav>
-        </div> 
-
-        <a href="assets/Currículo Bryan Kauan Fagundes.pdf" download id="downloadLink">
-            <button>Meu Currículo </button>
-            <div id="downloadaviso" class="aviso">Currículo baixado com sucesso!</div>
-            <!-- aviso de quando baixarem o currículo-->
-
-        </a>
+        </div>
     </header>
 
     <section class="topo_do_site">
         <div class="inicio">
-            <h1> Olá! Meu nome é Bryan Kauan! </h1>
-            <p> Nasci em 15 de setembro de 2008, e desde sempre fui apaixonado e podemos dizer que viciado em
-                computadores e tecnologia, tenho facilidade para aprender e boa comunicação, o que me ajuda a
-                entender e explicar conceitos de forma clara e objetiva. </p>
-            <p>Atualmente estou me dedicando ao estudo de desenvolvimento web (HTML, CSS, JavaScript), desenvolvimento
-                de aplicativos móveis (React Native), banco de dados (SQL/NoSQL) e
-                arquitetura de sistemas, buscando
-                me tornar um profissional completo em tecnologia da informação.
-            <p> Cursando o 3° ano do ensino médio técnico de
-                desenvolvimento de sistemas, futuramente, busco entrar
-                em uma faculdade e me profissionalizar na área de tecnologia.</p>
+            <h1>Olá! Bem-vindo ao meu Portfolio</h1>
+            <p>
+                Este portfólio foi criado para mostrar minhas habilidades e projetos desenvolvidos na área de
+                tecnologia. Aqui você poderá conhecer um pouco sobre mim, alguns de meus projetos escolares e formas de
+                contato.
             </p>
 
+            <p>Meu portfólio está organizado em sessões para facilitar sua navegação:</p>
+            <ul>
+                <li><u>Início:</u> Página principal com uma breve introdução.</li>
+                <li><u>Sobre mim:</u> Informações pessoais e um pouco do meu percurso acadêmico.</li>
+                <li>
+                    <u>Projetos:</u> Uma coleção dos meus projetos mais recentes e relevantes, incluindo
+                    descrições e tecnologias utilizadas.
+                </li>
+                <li><u>Contatos:</u> Formas de entrar em contato comigo, incluindo redes sociais e email.</li>
+            </ul>
+
+            <p>Explore meu trabalho e fique à vontade para entrar em contato!</p>
         </div>
         <div class="minhafoto">
-            <img src="assets/minha-foto.jpg" alt="minha foto">
+            <img src="assets/minha-foto.jpg" alt="minha foto" />
         </div>
     </section>
 
-    <section class="projetos" id="projetos">
-        <h1> MEUS PRINCIPAIS <span> PROJETOS: </span> </h1>
-        <p> Todos estão presentes e públicos no meu GitHub! </p>
-        <div class="h4">
-            <h4>
-                Ao clicar nas imagens, você será redirecionado para o site do projeto! 
-            </h4>
-        </div>
 
-        <div class="projetos-container"> 
-        <!-- Projeto 1 -->
-        <div class="projeto1">
-            <p>Site de academia do tema da serie animada <span> Invencivel. </span> <br> (2025) <br> </p>
-            <a href="https://invencivelgym.netlify.app" target="_blank">
-                <img src="assets/invencivel.gif" alt="imagem1">
-            </a>
-        </div>
-
-        <!-- Projeto 2 -->
-        <div class="projeto2">
-            <a href="https://braiatenebras.github.io/Slipknot/" target="_blank">
-                <p> Um site sobre a minha ex banda favorita: Slipknot! <br> (2024) <br> </p>
-                <img src="assets/slipknot.png" alt="imagem1">
-            </a>
-        </div>
-        </div>
-    </section>
-
-    <button id="topo" class="topo" aria-label="Voltar ao topo">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-
-
-    <section class="footer">
-        <footer class="footer" id="footer">
-            <h1> Formas de entrar em contato comigo: </h1>
-            <div class="social-links">
-                <a href="https://github.com/braiatenebras" class="social-link" target="_blank">
-                    <!-- target blank faz o link abrir em outra guia-->
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/eobraiak/" class="social-link" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/5541996861075" class="social-link" target="_blank"> <i
-                        class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-            <div class="copyright">
-                <p>© <span id="current-year"></span> - Bryan Kauan | 3°D </p>
-            </div>
-        </footer>
-    </section>
 
     <script src="script.js"></script>
+    <script src="cores.js"></script>
 </body>
 
 </html>

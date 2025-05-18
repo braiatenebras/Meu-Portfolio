@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+/* Variável para cor dinâmica */
+:root {
+    --dynamic-color: #008000;
+}
+
+/* Corpo da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-style: italic;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Seta de voltar */
+.voltar-link {
+    background-color: var(--dynamic-color);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* para tirar o fundo da seta */
+.voltar-link i {
+    background-color: transparent;
+}
+
+/* Seção de projetos */
+
+.projetos {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 50px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projetos h1 {
+    position: relative;
+    top: -50px;
+}
+
+.projetos p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    position: relative;
+    top: -50px;
+}
+
+.projetos span {
+    color: var(--dynamic-color);
+    transition: color 0.5s ease;
+    background-color: transparent;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    top: -30px;
+
+}
+
+/* Container que segura os projetos lado a lado */
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px;
+}
+
+/* Estilo para cada projeto individual */
+.projeto1,
+.projeto2 {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto1 img,
+.projeto2 img {
+    height: 350px;
+    width: 600px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: -40px;
+}
+
+.projeto1:hover img,
+.projeto2:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px #fff, 0 0 10px var(--dynamic-color),
+        0 0 15px var(--dynamic-color), 0 0 20px var(--dynamic-color),
+        0 0 25px var(--dynamic-color);
+}
+
+.projeto1 p,
+.projeto2 p {
+    margin-top: 20px;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.projeto1 span {
+    color: rgb(255, 230, 0);
+}
+
+/* Responsividade básica para projetos */
+@media (max-width: 1400px) {
+    .projetos-container {
+        gap: 50px;
+    }
+
+    .projeto1 img,
+    .projeto2 img {
+        height: 270px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .projetos-container {
+        flex-direction: column;
+        gap: 40px;
+        margin: 20px;
+    }
+
+    .projeto1 img,
+    .projeto2 img {
+        height: 270px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px;
+    }
+
+    .projeto1 img,
+    .projeto2 img {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-container {
+        gap: 20px;
+        margin: 10px;
+    }
+
+    .projeto1 img,
+    .projeto2 img {
+        height: 150px;
+        width: 100%;
+    }
+}

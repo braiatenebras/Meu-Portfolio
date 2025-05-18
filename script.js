@@ -1,6 +1,17 @@
+// Função para mudar a cor da página de verde para roxo a cada 2 segundos
+function changeColors() {
+  const colors = ["#008000", "#800080"]; // Verde e Roxo
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % colors.length;
+    document.documentElement.style.setProperty("--dynamic-color", colors[currentIndex]);
+  }, 2000);
+}
+
 // Efeito de digitar no texto
 function typeWriter() {
-  const titulo = document.querySelector(".inicio h1");
+  const titulo = document.querySelector(".inicio h1, .projetos h1 ");
   if (!titulo) return;
 
   const textoOriginal = titulo.textContent;
@@ -20,65 +31,47 @@ function typeWriter() {
   digitar();
 }
 
-// Função para alternar entre verde e roxo com transição suave
-function changeColors() {
-  const colors = ["#008000", "#800080"]; // Verde e Roxo
-  let currentIndex = 0;
 
-  // Adiciona transição no CSS root
-  document.documentElement.style.transition = "--dynamic-color 1s ease";
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % colors.length;
-    document.documentElement.style.setProperty(
-      "--dynamic-color",
-      colors[currentIndex]
-    );
-  }, 2000); // Intervalo de 2 segundos
+// apenas para o contato
+// Atualiza o ano atual no rodapé
+function atualizarAno() {
+  const anoElemento = document.getElementById("current-year");
+  if (anoElemento) {
+    anoElemento.textContent = new Date().getFullYear();
+  }
 }
 
-// Ano atual
-document.getElementById("current-year").textContent = new Date().getFullYear();
-
-// Seta para voltar para o topo
-const backToTopButton = document.getElementById("topo");
-if (backToTopButton) {
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add("visible");
-    } else {
-      backToTopButton.classList.remove("visible");
-    }
-  });
-
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+// apenas para o sobre mim
+// Aviso quando clicam no link de download do currículo
+function avisoDownload() {
+  const downloadLink = document.getElementById("downloadLink");
+  if (downloadLink) {
+    downloadLink.addEventListener("click", function () {
+      setTimeout(() => {
+        const aviso = document.getElementById("downloadaviso");
+        if (aviso) {
+          aviso.classList.add("show");
+          setTimeout(() => aviso.classList.remove("show"), 3000);
+        }
+      }, 500);
     });
-  });
+  }
 }
 
-// Avisar quando baixarem o curriculo
-const downloadLink = document.getElementById("downloadLink");
-if (downloadLink) {
-  downloadLink.addEventListener("click", function () {
-    setTimeout(() => {
-      const aviso = document.getElementById("downloadaviso");
-      aviso.classList.add("show");
-      setTimeout(() => aviso.classList.remove("show"), 3000);
-    }, 500);
-  });
-}
-
-// Inicialização
+// Inicialização após o DOM carregar
 document.addEventListener("DOMContentLoaded", function () {
-  // Define a cor inicial com transição
+  // Define cor inicial
   document.documentElement.style.setProperty("--dynamic-color", "#008000");
 
-  // Inicia a animação de cores
+  // Inicia mudança de cores
   changeColors();
 
-  // Inicia o efeito de digitação
+  // Inicia efeito de digitação
   typeWriter();
+
+  // Atualiza o ano no rodapé
+  atualizarAno();
+
+  // Configura aviso de download
+  avisoDownload();
 });

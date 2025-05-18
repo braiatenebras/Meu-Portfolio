@@ -19,7 +19,16 @@ body {
   flex-direction: column;
 }
 
-/* Parte da header */
+/* para forçar o sublinhado nos textos */
+u {
+  text-decoration: underline !important;
+}
+
+i {
+  background-color: transparent;
+}
+
+/* Header */
 header {
   padding: 20px;
   position: relative;
@@ -57,30 +66,8 @@ header button:hover {
   box-shadow: 0 0 10px rgba(5, 0, 3, 0.8);
 }
 
-/* Parte do aviso de download do curriculo */
-.aviso {
-  visibility: hidden;
-  min-width: 250px;
-  background-color: var(--dynamic-color);
-  color: white;
-  text-align: center;
-  border-radius: 20px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  right: 30px;
-  bottom: 30px;
-  font-size: 17px;
-  opacity: 0;
-  transition: opacity 0.5s, visibility 0.5s, background-color 0.5s ease;
-}
 
-.aviso.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Parte da navbar */
+/* Navbar */
 nav {
   padding: 10px;
   width: 100%;
@@ -92,21 +79,21 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 800px;
-  gap: 200px;
+  gap: 50px;
+  position: relative;
+  top: 30px;
 }
 
 nav a {
   color: white;
   transition: all 0.3s ease;
-  padding: 15px;
+  padding: 16px 40px;
   border-radius: 80px;
   display: block;
-  padding: 16px 40px;
 }
 
 nav a:hover {
@@ -114,7 +101,7 @@ nav a:hover {
   transform: scale(1.15);
 }
 
-/* Parte do topo do site */
+/* Topo do site */
 .topo_do_site {
   display: flex;
   flex-wrap: wrap;
@@ -155,12 +142,14 @@ nav a:hover {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     box-shadow: 0 0 15px var(--dynamic-color),
       inset 0 0 15px var(--dynamic-color);
     filter: drop-shadow(0 0 8px rgba(14, 165, 107, 0.4));
   }
+
   50% {
     box-shadow: 0 0 20px var(--dynamic-color),
       inset 0 0 20px var(--dynamic-color);
@@ -171,140 +160,39 @@ nav a:hover {
   max-width: 600px;
   flex: 1;
   min-width: 300px;
+  color: #e0e0e0;
 }
 
 .inicio h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-style: italic;
-  margin-bottom: 15px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 40px;
   text-align: center;
-}
-
-.inicio p {
-  margin-top: 15px;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  text-align: justify;
-}
-
-/* Parte de projetos */
-.projetos {
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-top: 50px;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projetos p {
-  margin-top: 20px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-}
-
-.projetos span {
-  color: var(--dynamic-color);
-  transition: color 0.5s ease;
-}
-
-.h4 {
-  font-size: 25px;
-  margin: 20px 0;
-  text-align: center;
-  max-width: 600px;
-}
-
-/* Container para projetos lado a lado */
-.projetos-container {
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px;
-}
-
-/* Estilo unificado para ambos projetos */
-.projeto1,
-.projeto2 {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projeto1 img,
-.projeto2 img {
-  height: 350px;
-  width: 600px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.projeto1:hover img,
-.projeto2:hover img {
-  transform: scale(1.02);
-  box-shadow: 0 0 5px #fff, 0 0 10px var(--dynamic-color),
-    0 0 15px var(--dynamic-color), 0 0 20px var(--dynamic-color),
-    0 0 25px var(--dynamic-color);
-}
-
-.projeto1 p,
-.projeto2 p {
-  margin-top: 20px;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  text-align: center;
-  max-width: 100%;
-  margin-bottom: 50px;
-}
-
-.projeto1 span {
-  color: rgb(255, 230, 0);
-}
-
-.footer {
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer h1 {
-  margin-bottom: 30px;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  color: white;
-  font-size: 2rem;
-  transition: transform 0.3s ease, color 0.5s ease;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.social-link:hover {
-  transform: scale(1.3);
-  color: var(--dynamic-color);
-}
-
-.copyright {
   margin-top: 30px;
 }
 
+.inicio p {
+  margin-top: 10px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  text-align: justify;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.inicio ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #ccc;
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.inicio ul li {
+  margin-bottom: 8px;
+}
+
+
+/* Efeito de piscar da digitação  */
 .cursor {
   animation: piscar 0.7s infinite;
   color: var(--dynamic-color);
@@ -313,51 +201,22 @@ nav a:hover {
 }
 
 @keyframes piscar {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
 }
 
-/* Seta para voltar ao topo */
-.topo {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--dynamic-color);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.5s ease;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.topo:hover {
-  background-color: var(--dynamic-color);
-  transform: scale(1.1);
-}
 
-.topo.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.topo i {
-  color: white;
-  background-color: transparent;
-}
-
+/* Responsividade */
+/* Responsividade */
+/* Responsividade */
 @media (max-width: 1400px) {
   .topo_do_site {
     flex-direction: column;
@@ -380,43 +239,30 @@ nav a:hover {
   nav a {
     padding: 10px 15px;
   }
-  .projeto1 img,
-  .projeto2 img {
-    height: 270px;
-    width: 500px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .topo_do_site {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .minhafoto {
-    order: -1;
-  }
-
-  .inicio h1,
-  .inicio p {
-    text-align: center;
-  }
-
-  nav ul {
-    gap: 1rem;
-  }
-
-  nav a {
-    padding: 10px 15px;
-  }
-  .projeto1 img,
-  .projeto2 img {
-    height: 270px;
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-top: -20px;
+  }
+
+  nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  nav ul li a i {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+
   .topo_do_site {
     flex-direction: column;
     gap: 30px;
@@ -437,11 +283,6 @@ nav a:hover {
 
   nav a {
     padding: 10px 15px;
-  }
-
-  h4 {
-    position: relative;
-    top: 20px;
   }
 }
 
@@ -458,17 +299,4 @@ nav a:hover {
     max-width: 300px;
   }
 
-  .social-links {
-    gap: 20px;
-  }
-
-  .social-link {
-    font-size: 1.8rem;
-  }
-
-  .projeto1 img,
-  .projeto2 img {
-    height: 200px;
-    width: 100%;
-  }
 }
