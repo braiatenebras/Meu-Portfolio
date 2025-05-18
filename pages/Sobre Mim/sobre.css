@@ -43,11 +43,6 @@ header h1 {
     top: 15px;
 }
 
-header h1:hover {
-    background-color: var(--dynamic-color);
-    transform: scale(1.05);
-    cursor: default;
-}
 
 header button {
     padding: 15px 40px;
@@ -79,6 +74,7 @@ header button:hover {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    z-index: 1000;
 }
 
 /* Para tirar o fundo da seta */
