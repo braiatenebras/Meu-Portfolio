@@ -8,19 +8,16 @@
     text-decoration: none;
 }
 
-/* Variável para cor dinâmica */
 :root {
     --dynamic-color: #008000;
 }
 
-/* Corpo da página */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Header */
 header {
     padding: 20px;
     position: relative;
@@ -39,7 +36,6 @@ header h1 {
 
 }
 
-/* Seta de voltar */
 .voltar-link {
     background-color: var(--dynamic-color);
     position: absolute;
@@ -58,7 +54,6 @@ header h1 {
 
 }
 
-/* para tirar o fundo da seta */
 .voltar-link i {
     background-color: transparent;
 }
@@ -101,26 +96,27 @@ h4 {
 
 }
 
-/* Container que segura os projetos lado a lado */
 .projetos-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 200px;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
-    margin: 40px;
+    margin: 20px;
 }
 
-/* Estilo para cada projeto individual */
 .projeto1,
-.projeto2 {
+.projeto2,
+.projeto3 {
     flex: 1;
     min-width: 300px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .projeto1 img,
@@ -133,8 +129,21 @@ h4 {
     top: -40px;
 }
 
+.projeto3 img {
+    width: 170px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: -60px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 .projeto1:hover img,
-.projeto2:hover img {
+.projeto2:hover img,
+.projeto3:hover img {
     transform: scale(1.02);
     box-shadow: 0 0 5px #fff, 0 0 10px var(--dynamic-color),
         0 0 15px var(--dynamic-color), 0 0 20px var(--dynamic-color),
@@ -142,7 +151,8 @@ h4 {
 }
 
 .projeto1 p,
-.projeto2 p {
+.projeto2 p,
+.projeto3 p {
     margin-top: 20px;
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     text-align: center;
@@ -154,7 +164,13 @@ h4 {
     color: rgb(255, 230, 0);
 }
 
-/* Responsividade básica para projetos */
+
+
+/* Responsividade*/
+/* Responsividade*/
+/* Responsividade*/
+/* Responsividade*/
+
 @media (max-width: 1400px) {
     .projetos-container {
         gap: 50px;
@@ -182,6 +198,12 @@ h4 {
 }
 
 @media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .projetos-container {
         flex-direction: column;
         gap: 30px;

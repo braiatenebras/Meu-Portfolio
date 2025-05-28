@@ -192,13 +192,44 @@ nav a:hover {
 }
 
 
-/* Efeito de piscar da digitação  */
+
+/* efeito de piscar da digitação  */
 .cursor {
   animation: piscar 0.7s infinite;
   color: var(--dynamic-color);
   font-weight: bold;
   transition: color 0.5s ease;
 }
+
+.linguagens {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.linguagens h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  color: var(--dynamic-color);
+}
+
+.icones-linguagens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+}
+
+.icones-linguagens i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icones-linguagens i:hover {
+  transform: scale(1.3);
+  color: var(--dynamic-color);
+}
+
 
 @keyframes piscar {
 
